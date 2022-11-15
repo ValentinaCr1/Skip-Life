@@ -1,0 +1,133 @@
+@charset "utf-8";
+*{
+	box-sizing: border-box;
+	font-family: 'Press Start 2P', cursive;
+}
+	
+.contenedor{
+	display: grid;
+	grid-template-rows: 50px auto 600px auto auto 600px 130px;
+	grid-template-columns: 3% 1fr 1fr 1fr 3%;
+	grid-template-areas: 
+		"... menu menu menu ..."
+		"... carrusel carrusel carrusel ..."
+		"... texto texto texto ..."
+		"... fanc fancy fancybox ..."
+		"... texto2 texto2 texto2 ..."
+		"... mapa mapa mapa ..."
+		"... pie pie pie ..."
+}
+.menu{
+	background-color:#FFA1BE;
+	grid-area: menu;
+	position: sticky;
+	padding-top: 1%;
+	top: 0;
+}
+
+.carrusel{
+	grid-area: carrusel;
+}
+
+.texto{
+	background-color:#66C8FF;
+	grid-area: texto;
+	padding: 2%;
+	font-size: 20px;
+	line-height: 40px;
+	margin: 2%;
+	text-align: left;
+}
+.elem4{
+	grid-area: fanc;
+}
+.elem5{
+	grid-area: fancy;
+}
+.elem7{
+	grid-area: fancybox;
+}
+.elem4 img ,.elem5 img ,.elem7 img {
+	width: 100%;
+	height: 100%;
+	padding: 3px;
+}
+
+.texto2{
+	background-color:#66C8FF;
+	grid-area: texto2;
+	padding: 2%;
+	font-size: 25px;
+	line-height: 40px;
+	margin: 2%;
+	text-align: left;
+}
+.mapa{
+	background-color:#A4DAED;
+	grid-area: mapa;
+}
+
+.mapa iframe{
+	width: 100%;
+	height: 100%;
+}
+
+.pie{
+	background-color: #A4DAED;
+	grid-area: pie;
+	display: flex;
+	padding-top: 13px;
+	
+
+}
+.qr {
+	padding-left: auto;
+	margin-left: 1%;
+	padding-top: 2px;
+}
+.por {
+	flex-grow: 7;
+	text-align: center;
+	padding-top: 1px;
+	
+	
+}
+
+.redes{
+	margin-right: 1%;
+	padding-top: 2px;
+
+	
+}
+.redes a:hover {
+	filter: blur(1px);
+}
+
+@media(max-width:768px){
+.contenedor{
+	display: grid;
+	grid-template-rows: 50px auto 600px auto auto 600px 600px 50px ;
+	grid-template-columns: 1fr 1fr ;
+	grid-template-areas: 
+		"menu menu"
+		"carrusel carrusel"
+		"texto texto"
+		"fanc fancy"
+		"fancybox fancybox"
+		"texto2 texto2"
+		"mapa mapa"
+		"pie pie"
+}
+	#qr{
+		display: none;
+	}
+	.texto{
+		font-size: 17px;
+	}
+	.texto2{
+		font-size: 15px;
+	}
+	
+}
+/* CSS Document */
+
